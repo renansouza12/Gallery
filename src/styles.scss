@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --Bg-color:#FAF6F3;
+    --Black:#000000;
+    --Hightlight:#BC4271;
+}
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Bg-color);
+}
+
+h1{
+    font-family: "Julius Sans One", sans-serif;
+}
