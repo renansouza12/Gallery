@@ -1,0 +1,39 @@
+.home{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home_content{
+        text-align: center;
+        width: 60%;
+        position: relative;
+
+        &::after,&::before{
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 10%;
+            background-color: var(--Black);
+        }
+
+        &::after{
+            top: 15%;
+            left: 0;
+        }
+        &::before{
+            bottom: 15%;
+            right: 0;
+        }
+        span{
+            color: var(--Hightlight);
+        }
+    
+        img{
+            height: 10vh;
+            width: 15vw;
+            object-fit: cover;
+        }
+    }
+  
+}

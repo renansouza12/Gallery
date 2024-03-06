@@ -12,7 +12,7 @@ header{
             content: "";
             height: 1px;
             width: 100%;
-            top: 0;
+            top: -5%;
             background-color: var(--Hightlight);
             animation: light 5s ease-in-out infinite;
         }
@@ -49,18 +49,18 @@ header{
 
 @keyframes light {
     0% {
-      background: #BC4271; /* Start with the initial color */
+      background: #BC4271; 
     }
     25% {
-      background: #803357; /* Darker shade at 25% */
+      background: #803357; 
     }
     50% {
-      background: #BC4271; /* Peak brightness at the initial color */
+      background: #BC4271; 
     }
     75% {
-      background: #803357; /* Darker shade at 75% */
+      background: #803357; 
     }
     100% {
-      background: #BC4271; /* Back to the initial color at the end */
+      background: #BC4271; 
     }
   }
