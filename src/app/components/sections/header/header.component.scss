@@ -1,66 +1,76 @@
-header{
-    position:fixed;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    nav{
-        display: flex;
-        gap: 1.5rem;
-        
-        &::after{
-            position: absolute;
-            content: "";
-            height: 1px;
-            width: 100%;
-            top: -5%;
-            background-color: var(--Hightlight);
-            animation: light 5s ease-in-out infinite;
-        }
+header {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-        .link{
-            display: flex;
-            flex-direction: column;     
+  nav {
+    display: flex;
+    gap: 1.5rem;
 
-            a,span{
-                color: var(--Black);
-                text-transform: uppercase;
-                transition: .5s;
-            }
-            span{
-              cursor: pointer;
-            }
-            a{
-                opacity: 0;
-                &:hover{
-                    color: var(--Hightlight);
-                }
-            }
-
-            &:hover span{
-                opacity: 0;
-            }
-            &:hover a{
-                opacity: 1;
-                transform: translateY(-15px);
-            }
-        }
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 100%;
+      top: -5%;
+      background-color: var(--Hightlight);
+      animation: light 5s ease-in-out infinite;
     }
+
+    .link {
+      display: flex;
+      flex-direction: column;
+
+      a,
+      span {
+        color: var(--Black);
+        text-transform: uppercase;
+        transition: .5s;
+      }
+
+      span {
+        cursor: pointer;
+      }
+
+      a {
+        opacity: 0;
+
+        &:hover {
+          color: var(--Hightlight);
+        }
+      }
+
+      &:hover span {
+        opacity: 0;
+      }
+
+      &:hover a {
+        opacity: 1;
+        transform: translateY(-15px);
+      }
+    }
+  }
 }
 
 @keyframes light {
-    0% {
-      background: #BC4271; 
-    }
-    25% {
-      background: #803357; 
-    }
-    50% {
-      background: #BC4271; 
-    }
-    75% {
-      background: #803357; 
-    }
-    100% {
-      background: #BC4271; 
-    }
+  0% {
+    background: #BC4271;
   }
+
+  25% {
+    background: #803357;
+  }
+
+  50% {
+    background: #BC4271;
+  }
+
+  75% {
+    background: #803357;
+  }
+
+  100% {
+    background: #BC4271;
+  }
+}

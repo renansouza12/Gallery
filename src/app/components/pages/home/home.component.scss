@@ -1,15 +1,17 @@
-.home{
+.home {
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    .home_content{
+
+    .home_content {
         text-align: center;
         width: 60%;
         position: relative;
 
-        &::after,&::before{
+        &::after,
+        &::before {
             position: absolute;
             content: "";
             height: 1px;
@@ -17,23 +19,26 @@
             background-color: var(--Black);
         }
 
-        &::after{
+        &::after {
             top: 15%;
             left: 0;
         }
-        &::before{
+
+        &::before {
             bottom: 15%;
-            right: 0;
+            right: -7%;
         }
-        span{
+
+        span {
             color: var(--Hightlight);
         }
-    
-        img{
+
+        img {
             height: 10vh;
             width: 15vw;
             object-fit: cover;
         }
     }
-  
+
 }
+
