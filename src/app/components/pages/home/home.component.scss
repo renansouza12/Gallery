@@ -2,13 +2,15 @@
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-
     .home_content {
         text-align: center;
         width: 60%;
         position: relative;
+
+        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
         &::after,
         &::before {
@@ -39,6 +41,48 @@
             object-fit: cover;
         }
     }
+    .message{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+            width: 100%;
+            height: 150px;
+            .text-path {
+                fill: none;
+                stroke: var(--Black);
+                stroke-width: 2;
+              }
+          
+              .text-content {
+                font-weight: bold;
+                font-size: 20px;
+                transform: translate(130px,-50px) rotate(10deg);
+              }
+        }
+        .icons{
+            position: absolute;
+            bottom: 50%;
+            i{
+                font-size: 20px;
+                animation: fadeInOut 2s ease-in-out infinite;
 
+                &:nth-child(2){
+                  animation-delay: 0.2s;
+                }
+                &:nth-child(3){
+                    animation-delay: 0.4s;
+                }
+            }
+        }
+    }
 }
-
+@keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
