@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
   standalone: true,
   imports: [],
   templateUrl: './introduction.component.html',
-  styleUrl: './introduction.component.scss'
+  styleUrls: ['./introduction.component.scss','./introduction.responsive.component.scss']
 })
 export class IntroductionComponent implements OnInit {
   ngOnInit(): void {
@@ -44,7 +44,7 @@ export class IntroductionComponent implements OnInit {
       scrollTrigger:{
         trigger:".introduction",
         start:"-20% center",
-        end:"center center",
+        end:"top center",
         scrub:1,
       }
     })
