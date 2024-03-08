@@ -10,15 +10,13 @@
         width: 60%;
         position: relative;
 
-        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-
         &::after,
         &::before {
             position: absolute;
             content: "";
             height: 1px;
             width: 10%;
-            background-color: var(--Black);
+            background-color: var(--Text-color);
         }
 
         &::after {
@@ -32,7 +30,7 @@
         }
 
         span {
-            color: var(--Hightlight);
+            color: var(--Yellow);
         }
 
         img {
@@ -48,36 +46,27 @@
         align-items: center;
         svg{
             width: 100%;
-            height: 150px;
-            .text-path {
-                fill: none;
-                stroke: var(--Black);
-                stroke-width: 2;
-              }
-          
-              .text-content {
-                font-weight: bold;
-                font-size: 20px;
-                transform: translate(130px,-50px) rotate(10deg);
-              }
+            height: 100%;
+            animation: rotate 5s linear infinite;
         }
         .icons{
             position: absolute;
-            bottom: 50%;
+            bottom: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             i{
-                font-size: 20px;
+                font-size: 40px;
                 animation: fadeInOut 2s ease-in-out infinite;
-
-                &:nth-child(2){
-                  animation-delay: 0.2s;
-                }
-                &:nth-child(3){
-                    animation-delay: 0.4s;
-                }
             }
         }
     }
 }
+
+@keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 @keyframes fadeInOut {
     0%, 100% {
       opacity: 0;

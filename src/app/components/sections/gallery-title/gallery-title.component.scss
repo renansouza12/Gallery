@@ -1,0 +1,21 @@
+.gallery_title{
+    height: 100vh;
+    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/c4cc19188589105.659e6a3a3efed.jpg') center/cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    overflow: hidden;
+    .phrase{
+        border-bottom: 1px solid var(--Yellow);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 1rem;
+        &:nth-child(2){
+            justify-content: flex-end;
+        }
+        h1{
+            color: var(--Yellow);
+        }
+    }
+}

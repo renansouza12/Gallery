@@ -13,9 +13,9 @@ header {
       content: "";
       height: 1px;
       width: 100%;
+      left: 0;
       top: -5%;
-      background-color: var(--Hightlight);
-      animation: light 5s ease-in-out infinite;
+      background-color: var(--Yellow);
     }
 
     .link {
@@ -24,7 +24,7 @@ header {
 
       a,
       span {
-        color: var(--Black);
+        color: var(--White);
         text-transform: uppercase;
         transition: .5s;
       }
@@ -37,7 +37,7 @@ header {
         opacity: 0;
 
         &:hover {
-          color: var(--Hightlight);
+          color: var(--Yellow);
         }
       }
 
@@ -50,27 +50,5 @@ header {
         transform: translateY(-15px);
       }
     }
-  }
-}
-
-@keyframes light {
-  0% {
-    background: #BC4271;
-  }
-
-  25% {
-    background: #803357;
-  }
-
-  50% {
-    background: #BC4271;
-  }
-
-  75% {
-    background: #803357;
-  }
-
-  100% {
-    background: #BC4271;
   }
 }

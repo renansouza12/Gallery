@@ -4,7 +4,8 @@ import { NgOptimizedImage } from '@angular/common';
 import { HeaderComponent } from './components/sections/header/header.component';
 import { HomeComponent } from './components/sections/home/home.component';
 import { GalleryComponent } from './components/sections/gallery/gallery.component';
-import { IntroductionComponent } from './components/introduction/introduction.component';
+import { IntroductionComponent } from './components/sections/introduction/introduction.component';
+import { GalleryTitleComponent } from './components/sections/gallery-title/gallery-title.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { IntroductionComponent } from './components/introduction/introduction.co
           HeaderComponent,
           HomeComponent,
           IntroductionComponent,
+          GalleryTitleComponent,
           GalleryComponent
         ],
   templateUrl: './app.component.html',

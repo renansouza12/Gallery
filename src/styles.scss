@@ -1,9 +1,11 @@
 :root{
-    --Bg-color:#FAF6F3;
+    --Bg-color:#1C1A1C;
     --Black:#000000;
     --White:#FFFFFF;
     --Hightlight:#BC4271;
-    --Gray:#282A3A;
+    --Dark-green:#1E1E1E;
+    --Yellow:#FFC26F;
+    --Text-color:#FFEDDD;
 }
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
@@ -22,8 +24,12 @@ h1{
     font-family: "Julius Sans One", sans-serif;
     font-size: 7vw;
     text-transform: uppercase;
+    color: var(--Text-color);
 }
 
 a{
     text-decoration: none;
+}
+i{
+    color: var(--White);
 }
