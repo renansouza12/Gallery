@@ -1,3 +1,7 @@
 <div class="gallery">
-    oi
+  <h2>The art Gallery</h2>
+
+  <div class="gallery_images">
+    <app-card *ngFor="let photo of photosList" imgUrl="{{ photo }}" />
+  </div>
 </div>

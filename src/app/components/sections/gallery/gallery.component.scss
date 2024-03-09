@@ -1,4 +1,24 @@
 .gallery{
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    background-color: var(--Text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        font-size: 6vw;
+        color: var(--Black);
+        font-weight: 100;
+        margin: 5rem 0;
+    }
+    .gallery_images{
+        height: 100%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 0.5fr);
+        gap: 1rem;
+        overflow: hidden;
+    }
 }

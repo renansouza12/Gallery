@@ -1,0 +1,10 @@
+.card{
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;  
+    }
+}
