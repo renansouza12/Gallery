@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../ui/card/card.component';
-import { ImagesService } from '../../../servives/images.service';
+import { ImagesService } from '../../../services/images.service';
 import { Photo } from '../../../models/photos.model';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [CardComponent,CommonModule],
+  imports: [CommonModule,CardComponent],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss'
 })
