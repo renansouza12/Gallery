@@ -13,7 +13,7 @@ export class ImagesService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getPhotos(){
-    return this.httpClient.get<Photo[]>(`${this.apiUrl}/photos/?client_id=${this.apiKey}`);
+  getPhotos(pages:number){
+    return this.httpClient.get<Photo[]>(`${this.apiUrl}/photos/?client_id=${this.apiKey}&page=${pages}&per_page=21`);
   }
 }

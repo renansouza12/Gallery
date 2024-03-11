@@ -33,3 +33,11 @@ a{
 i{
     color: var(--White);
 }
+button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

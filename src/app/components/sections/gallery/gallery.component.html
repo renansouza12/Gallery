@@ -1,9 +1,10 @@
 <div class="gallery">
-  <h2>The art Gallery</h2>
+  <h2>The Gallery's images</h2>
 
   <div class="gallery_images">
     <app-card *ngFor="let photo of photosList"
-      imgUrl={{photo}}
+      imgUrl={{photo.urls.regular}}
     />
   </div>
+  <button class="next" (click)="loadMore()">See more</button>
 </div>

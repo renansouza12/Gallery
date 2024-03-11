@@ -17,16 +17,25 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export class GalleryComponent implements OnInit{
 
   photosList:Photo[] = [];
+  page:number = 1;
+
 
   constructor(private imageService: ImagesService){}
   
   ngOnInit(): void {
     this.getPhotosList();
     this.imagesAnimation();
+    this.loadMore();
+  }
+
+
+  loadMore():void{
+    this.page ++;
+    this.getPhotosList();
   }
 
   getPhotosList(){
-    this.imageService.getPhotos().subscribe(photos => this.photosList = photos.map(photo => photo.urls.regular))
+    this.imageService.getPhotos(this.page).subscribe(photos => this.photosList = this.photosList.concat(photos))
   }
 
   private imagesAnimation():void{
@@ -41,7 +50,7 @@ export class GalleryComponent implements OnInit{
         scrub: 1,
         start:"top center",
         end: 'center center',
-        markers:true
+
       },
     });
   }
