@@ -5,31 +5,36 @@
     margin: 1rem 0;
     position: relative;
 
+
     label {
-        transform: translate(100px, 15px);
+        position: absolute;
+        top: 0%;
+        right: 32%;
         transition: 0.3s ease-out, font-size 0.3s ease-out;
         pointer-events: none;
 
         &.active {
-            transform: translate(400px, -15px);
+            right: 5%;
         }
 
         &.disable {
-            transform: translate(100px, -15px);
+          right: 30%;
         }
     }
 
     input {
-        height: 3rem;
         width: 40%;
+        height: 3rem;
         font-size: 14px;
         color: var(--Black);
         border-bottom: 1px solid var(--Yellow);
         padding: 0 8rem 0 1rem;
     }
 
+
     .icon {
         position: absolute;
+        top: 25%;
         cursor: pointer;
         i {
             color: var(--Black);
