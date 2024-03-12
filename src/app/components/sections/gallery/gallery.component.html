@@ -1,9 +1,11 @@
 <div class="gallery">
   <h2>The Gallery's images</h2>
-
+  <app-search-bar
+    (searchBtnValue)="searchValuePhoto($event)"
+  />
   <div class="gallery_images">
     <app-card *ngFor="let photo of photosList"
-      imgUrl={{photo.urls.regular}}
+      imgUrl={{photo}}
     />
   </div>
   <button class="next" (click)="loadMore()">See more</button>

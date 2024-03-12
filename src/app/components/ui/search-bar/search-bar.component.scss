@@ -1,0 +1,38 @@
+.search_bar_container {
+    width: 90vw;
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+    position: relative;
+
+    label {
+        transform: translate(100px, 15px);
+        transition: 0.3s ease-out, font-size 0.3s ease-out;
+        pointer-events: none;
+
+        &.active {
+            transform: translate(400px, -15px);
+        }
+
+        &.disable {
+            transform: translate(100px, -15px);
+        }
+    }
+
+    input {
+        height: 3rem;
+        width: 40%;
+        font-size: 14px;
+        color: var(--Black);
+        border-bottom: 1px solid var(--Yellow);
+        padding: 0 8rem 0 1rem;
+    }
+
+    .icon {
+        position: absolute;
+        cursor: pointer;
+        i {
+            color: var(--Black);
+        }
+    }
+}

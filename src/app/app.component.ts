@@ -16,7 +16,7 @@ import { GalleryTitleComponent } from './components/sections/gallery-title/galle
           HomeComponent,
           IntroductionComponent,
           GalleryTitleComponent,
-          GalleryComponent
+          GalleryComponent,
         ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

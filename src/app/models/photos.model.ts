@@ -1,5 +1,12 @@
 export interface Photo {
-    urls:{
-        regular:any
+
+    results: {
+        urls: {
+            regular: any
+        }
     }
+    urls: {
+        regular: any
+    }
+
 }
