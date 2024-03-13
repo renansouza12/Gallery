@@ -1,12 +1,9 @@
 <div class="gallery">
   <h2>The Gallery's images</h2>
-  <app-search-bar
-    (searchBtnValue)="searchValuePhoto($event)"
-  />
+  <app-search-bar (searchBtnValue)="searchValuePhoto($event)" />
   <div class="gallery_images">
-    <app-card *ngFor="let photo of photosList"
-      imgUrl={{photo}}
-    />
+    <app-card *ngFor="let photo of photosList" imgUrl="{{ photo }}" />
+    <app-not-found *ngIf="notFound" />
   </div>
-  <button class="next" (click)="loadMore()">See more</button>
+  <button class="next" *ngIf="activeButton" (click)="loadMore()">See more</button>
 </div>

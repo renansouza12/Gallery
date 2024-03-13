@@ -1,9 +1,18 @@
 <div class="search_bar_container">
-    <label for="search_bar" [className]="isFocus" >{{labelText || 'Search Here'}}
-        <span>.</span>  <span>.</span>  <span>.</span>
-    </label>
-    <input type="text" class="search_bar" [(ngModel)]="value"  (focus)="inputFocus()"  (blur)="inputBlur()"  (keydown.enter)="keyPressed($event)"  placeholder="...">
-    <div class="icon" (click)="searchBtn(value)">
-        <i class="ph ph-magnifying-glass"></i>
-    </div>
+  <label for="search_bar" [className]="isFocus"
+    >{{ labelText || "Search Here" }} <span>.</span> <span>.</span>
+    <span>.</span>
+  </label>
+  <input
+    type="text"
+    class="search_bar"
+    [(ngModel)]="value"
+    (focus)="inputFocus()"
+    (blur)="inputBlur()"
+    (keydown.enter)="keyPressed($event)"
+    placeholder="..."
+  />
+  <div class="icon" (click)="searchBtn(value)">
+    <i class="ph ph-magnifying-glass"></i>
+  </div>
 </div>

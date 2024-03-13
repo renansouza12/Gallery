@@ -4,11 +4,12 @@ import { ImagesService } from '../../../services/images.service';
 import { Photo} from '../../../models/photos.model';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from '../../ui/search-bar/search-bar.component';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [CommonModule,CardComponent,SearchBarComponent],
+  imports: [CommonModule,CardComponent,SearchBarComponent,NotFoundComponent],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss'
 })
@@ -18,6 +19,8 @@ export class GalleryComponent implements OnInit{
   page: number = 1;
   value: string = '';
 
+  notFound:boolean = false;
+  activeButton:boolean = true;
   constructor(private imageService: ImagesService) {}
 
   ngOnInit(): void {
@@ -41,11 +44,19 @@ export class GalleryComponent implements OnInit{
 
   searchValuePhoto(value: string,keepSearch: boolean = false): void {
     this.value = value;
+
     this.imageService.getSearchPhoto(this.page,this.value).subscribe((response:any) => {
        if (!keepSearch) {
         this.photosList = [];
       }
-      this.photosList = this.photosList.concat(response.results.map((photo:Photo) => photo.urls.regular)); 
+      if(response.results.length === 0){
+        this.notFound = true;
+        this.activeButton = false;
+      }else{
+        this.notFound = false;
+        this.photosList = this.photosList.concat(response.results.map((photo:Photo) => photo.urls.regular)); 
+      }
+     
     })
   }
 }
