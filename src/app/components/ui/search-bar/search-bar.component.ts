@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule,FormsModule],
   templateUrl: './search-bar.component.html',
-  styleUrl: './search-bar.component.scss'
+  styleUrls:[ './search-bar.component.scss','search-bar.responsive.component.scss']
 })
 export class SearchBarComponent {
   labelText!:string;
@@ -17,7 +17,7 @@ export class SearchBarComponent {
 
   inputFocus():void{
     this.isFocus = "active";
-    this.labelText = "Searching...";
+    this.labelText = "Searching";
   }
   inputBlur():void{
     this.isFocus = "disable"
@@ -30,6 +30,7 @@ export class SearchBarComponent {
     this.searchBtnValue.emit(value);
   }
 
-
-
+  keyPressed(event:any) {
+    this.searchBtn(event.target.value)
+  }
 }

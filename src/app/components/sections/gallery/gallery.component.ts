@@ -26,17 +26,26 @@ export class GalleryComponent implements OnInit{
 
   loadMore(): void {
     this.page++;
-    this.getPhotosList();
+    if (this.value !== '') {
+      this.searchValuePhoto(this.value, true);
+    } else {
+      this.getPhotosList();
+    }
   }
 
   getPhotosList(): void {
-    this.imageService.getPhotos(this.page).subscribe((photos: Photo[]) => {
-      this.photosList = [...this.photosList, ...photos.map(photo => photo.urls.regular)];
+    this.imageService.getPhotos(this.page).subscribe(photos => {
+      this.photosList = this.photosList.concat(photos.map(photo => photo.urls.regular));
     });
   }
 
-  searchValuePhoto(value: string): void {
+  searchValuePhoto(value: string,keepSearch: boolean = false): void {
     this.value = value;
-    this.page = 1;
+    this.imageService.getSearchPhoto(this.page,this.value).subscribe((response:any) => {
+       if (!keepSearch) {
+        this.photosList = [];
+      }
+      this.photosList = this.photosList.concat(response.results.map((photo:Photo) => photo.urls.regular)); 
+    })
   }
 }

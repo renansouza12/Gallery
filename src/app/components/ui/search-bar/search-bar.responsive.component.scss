@@ -1,0 +1,31 @@
+@media (max-width:1000px) {
+    .search_bar_container{
+        label{
+            &.disable {
+                right: 25%;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .search_bar_container{
+        label{
+            font-size: 12px;
+            &.disable {
+                right: 25%;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .search_bar_container{
+        label{
+            font-size: 10px;
+            &.disable {
+                right: 23%;
+            }
+        }
+    }
+}
