@@ -53,6 +53,7 @@ export class GalleryComponent implements OnInit{
         this.notFound = true;
         this.activeButton = false;
       }else{
+        this.activeButton = true;
         this.notFound = false;
         this.photosList = this.photosList.concat(response.results.map((photo:Photo) => photo.urls.regular)); 
       }

@@ -1,0 +1,41 @@
+.not_found{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .not_found_title{
+        position: relative;
+        h1{
+            font-size: 6vw;
+            color: var(--Black);
+            display: flex;
+            align-items: center;
+            span{
+                color: var(--Yellow);
+                border: 1px solid var(--Yellow);
+                text-transform: uppercase;
+                font-size: 2vw;
+                padding: 10px 1rem;
+            }
+        }
+        h2{
+            position: absolute;
+            left: 40%;
+            top: -50%;
+            rotate: -15deg;
+            text-transform: uppercase;
+            font-size: 5vw ;
+            font-weight: 100;
+        }
+    }
+
+    button{
+        border: 1px solid var(--Black);
+        color: var(--Black);
+        padding: 1rem 2rem;
+        border-radius: 3rem;
+    }
+    
+}
