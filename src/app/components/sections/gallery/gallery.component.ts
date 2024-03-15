@@ -60,4 +60,10 @@ export class GalleryComponent implements OnInit{
      
     })
   }
+
+  btnBack():void{
+    this.notFound = false;
+    this.activeButton = true;
+    this.getPhotosList();
+  }
 }

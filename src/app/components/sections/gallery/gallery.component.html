@@ -1,7 +1,10 @@
 <div class="gallery">
   <h2>The Gallery's images</h2>
   <app-search-bar (searchBtnValue)="searchValuePhoto($event)" />
-  <app-not-found *ngIf="notFound" />
+    <app-not-found 
+    *ngIf="notFound"
+      (backBtn)="btnBack()"
+    />
   <div class="gallery_images">
     <app-card *ngFor="let photo of photosList" imgUrl="{{ photo }}" />
   </div>
