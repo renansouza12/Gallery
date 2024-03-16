@@ -7,7 +7,7 @@ import { Component,Output,EventEmitter } from '@angular/core';
   standalone: true,
   imports: [NgOptimizedImage],
   templateUrl: './not-found.component.html',
-  styleUrl: './not-found.component.scss'
+  styleUrls: ['./not-found.component.scss','./not-found.responsive.component.scss']
 })
 export class NotFoundComponent {
   @Output() backBtn = new EventEmitter<string>();
