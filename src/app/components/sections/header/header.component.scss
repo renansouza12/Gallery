@@ -5,7 +5,8 @@ header{
   transform: translate(-50%,-50%);
   height: 150px;
   width: 2px;
-  background-color: var(--White);
+  border-radius: 1rem;
+  background-color: var(--Yellow);
   z-index: 100;
 
   nav{
@@ -28,7 +29,7 @@ header{
         }
         p{
           font-weight: bold;
-          transition: 1s;
+          transition: .5s;
         }
   
       }
@@ -36,16 +37,17 @@ header{
       &::after{
         position: absolute;
         content: "";
-        height: 2px;
+        height: 1px;
         width: 8px;
         background-color: var(--White);
         top: 0;
         right: -90px;
-        transition: 1s;
+        transition: .5s;
       }
 
       &:hover p {
           transform: translateX(-130px);
+          font-size: 20px;
       }
       &:hover::after{
         top: 100%;

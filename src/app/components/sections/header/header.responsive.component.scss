@@ -1,0 +1,25 @@
+
+@media (max-width:425px) {
+    header{
+      left: 2%;
+      nav{
+        .link{
+          a{
+            h2{
+              font-size: 15px;
+            }
+            p{
+              font-size: 14px;
+            }
+          }
+          &:hover p {
+            transform: translate(-40px,-20px);
+            font-size: 20px;
+          }
+          &:after{
+            right: -60px;
+          }
+        }
+      }
+    }
+  }
