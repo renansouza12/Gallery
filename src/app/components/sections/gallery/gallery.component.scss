@@ -14,12 +14,12 @@
         margin: 5rem 0;
     }
     .gallery_images{
+        margin-top: 4rem;
         height: 100%;
         width: 90%;
         display: grid;
-        grid-template-columns: repeat(3, 0.5fr);
+        grid-template-columns: repeat(3, 0.4fr);
         gap: 1rem;
-        overflow: hidden;
     }
 
     button{
