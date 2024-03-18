@@ -24,15 +24,33 @@
             background-color: var(--Yellow);
             position: relative;
             top: 0px;
+            
+            .b_top, .b_top_left,.b_top_right{
+                border-top: 1px solid var(--Yellow);
+                border-left: 1px solid var(--Yellow);
+                position: absolute;
+                rotate: 45deg;
+            }
 
             .b_top{
                 height:20px;
                 width:20px;
-                border: 1px solid var(--Yellow);
-                position: absolute;
                 left: 45%;
                 top: -10px;
-                rotate: 45deg;
+            }
+
+            .b_top_left{
+                height:10px;
+                width:10px;
+                left: 40%;
+                top: -6px;
+               
+            }
+            .b_top_right{
+                height:10px;
+                width:10px;
+                right: 40%;
+                top: -6px;
             }
           
 
