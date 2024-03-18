@@ -1,0 +1,8 @@
+
+@media (max-width:425px) {
+    .gallery{
+        .gallery_images{
+            grid-template-columns: 1fr;
+        }
+    }
+}

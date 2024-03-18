@@ -1,7 +1,7 @@
 .gallery{
     height: 100%;
     width: 100%;
-    background-color: var(--Text-color);
+    background-color: var(--Dark-green);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@
 
     h2{
         font-size: 6vw;
-        color: var(--Black);
+        color: var(--Text-color);
         font-weight: 100;
         margin: 5rem 0;
     }
@@ -26,7 +26,7 @@
         margin: 2rem 0;
         padding: 1rem 2rem;
         border: 1px solid var(--Yellow);
-        color: var(--Black);
+        color: var(--Text-color);
         position: relative;
         transition: .5s 0.5s;
         &::after{

@@ -13,6 +13,7 @@
         text-align: center;
         z-index: 1;
         font-weight: bold;
+        color: var(--Text-color);
     }
 
     .not_found_title {
@@ -42,6 +43,7 @@
             text-transform: uppercase;
             font-size: 5vw;
             font-weight: 100;
+            color: var(--Black);
         }
     }
 
@@ -82,7 +84,7 @@
     }
 
     button {
-        color: var(--Black);
+        color: var(--Text-color);
         padding: 2rem 3rem;
         border-radius: 3rem;
         font-weight: bold;

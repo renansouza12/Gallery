@@ -4,7 +4,7 @@
     justify-content: flex-end;
     margin: 1rem 0;
     position: relative;
-
+    color: var(--Text-color);
 
     label {
         position: absolute;
@@ -38,7 +38,7 @@
         width: 40%;
         height: 3rem;
         font-size: 14px;
-        color: var(--Black);
+        color: var(--Text-color);
         border-bottom: 1px solid var(--Yellow);
         padding: 0 8rem 0 1rem;
     }
@@ -50,7 +50,7 @@
         cursor: pointer;
 
         i {
-            color: var(--Black);
+            color: var(--Text-color);
         }
     }
 }

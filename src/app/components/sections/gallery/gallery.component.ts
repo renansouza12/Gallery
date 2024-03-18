@@ -11,7 +11,7 @@ import { NotFoundComponent } from '../not-found/not-found.component';
   standalone: true,
   imports: [CommonModule,CardComponent,SearchBarComponent,NotFoundComponent],
   templateUrl: './gallery.component.html',
-  styleUrl: './gallery.component.scss'
+  styleUrls: ['./gallery.component.scss','./gallery.responsive.component.scss']
 })
 export class GalleryComponent implements OnInit{
   photosList: Photo[] = [];
@@ -62,6 +62,7 @@ export class GalleryComponent implements OnInit{
   }
 
   btnBack():void{
+    this.value = '';
     this.notFound = false;
     this.activeButton = true;
     this.getPhotosList();
