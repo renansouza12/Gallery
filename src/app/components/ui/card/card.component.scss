@@ -19,19 +19,32 @@
         flex-direction: column;
         justify-content: space-between;
         .custom_border{
-            height: 10px;
+            height: 20px;
             width: 20vw;
-            border: 1px solid var(--Yellow);
+            border-bottom: 2px solid var(--Yellow);
+            overflow: hidden;
             position: relative;
-            top: -10px;
+            top: -20px;
             .b_top{
                 height: 20px;
                 width: 20px;
                 border: 1px solid var(--Yellow);
                 position: absolute;
-                left: 45%;
-                top: -10px;
+                left: 40%;
+                top: 10px;
                 rotate: 45deg;
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 60px;
+                    height: 1px;
+                    background-color: var(--Yellow);
+                    rotate: -45deg;
+                    top: -16px;
+                    left: -10%;
+                    transform: translate(-50%,-50%);
+                }
             }
 
         }
