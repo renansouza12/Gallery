@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input,Output,EventEmitter } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
 
@@ -11,4 +11,10 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class CardComponent {
   @Input() imgUrl!:string;
+
+  @Output() seeMoreImage = new EventEmitter<string>();
+
+  seeMore():void{
+    this.seeMoreImage.emit();
+  }
 }
