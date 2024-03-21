@@ -74,7 +74,10 @@ export class GalleryComponent implements OnInit {
 
     this.photosList.forEach(photo => {
       if (photo.id === id) {
+      this.photoSelected = [];
       this.photoSelected.push(photo);
+      console.log(this.photoSelected);
+      
       }
     })
 

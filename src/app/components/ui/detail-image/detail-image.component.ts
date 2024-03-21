@@ -10,4 +10,5 @@ import { Component,Input } from '@angular/core';
 })
 export class DetailImageComponent {
   @Input() detailImage!:string;
+  @Input() alt!:string;
 }
