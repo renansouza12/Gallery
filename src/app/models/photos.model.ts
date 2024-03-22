@@ -9,9 +9,3 @@ urls: any
 }
 
 
-export interface Details{
-    
-    urls:{
-        full:string
-    }
-}

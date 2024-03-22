@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../ui/card/card.component';
 import { ImagesService } from '../../../services/images.service';
-import { Photo,Details } from '../../../models/photos.model';
+import { Photo} from '../../../models/photos.model';
+import { Details } from '../../../models/details.model';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from '../../ui/search-bar/search-bar.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { DetailImageComponent } from '../../ui/detail-image/detail-image.component';
+
 
 @Component({
   selector: 'app-gallery',
@@ -71,15 +73,12 @@ export class GalleryComponent implements OnInit {
   }
 
   seeMore(id: String): void {
-
     this.photosList.forEach(photo => {
       if (photo.id === id) {
-      this.photoSelected = [];
-      this.photoSelected.push(photo);
-      console.log(this.photoSelected);
-      
+        this.photoSelected = [];
+        this.photoSelected.push(photo)
+        console.log(this.photoSelected);
       }
     })
-
   }
 }

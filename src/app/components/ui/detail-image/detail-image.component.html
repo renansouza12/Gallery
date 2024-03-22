@@ -1,13 +1,15 @@
-<div class="detail_image">
+<div class="detail_image" [ngClass]="showImageDetail">
     <div class="detail_image_header">
         <h1>Gallery</h1>
-
-        <button><i class="ph ph-x-circle"></i></button>
+        <button  (click)="closeImageDetail()" ><i class="ph ph-x-circle"></i></button>
     </div>
     <div class="image_container">
         <img src={{detailImage}} alt={{alt}}>
     </div>
    <div class="detail_title">
     <h1>Explore</h1>
+   </div>
+   <div class="detail_image_footer">
+
    </div>
 </div>
