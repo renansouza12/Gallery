@@ -75,9 +75,7 @@ export class GalleryComponent implements OnInit {
   seeMore(id: String): void {
     this.photosList.forEach(photo => {
       if (photo.id === id) {
-        this.photoSelected = [];
         this.photoSelected.push(photo)
-        console.log(this.photoSelected);
       }
     })
   }
