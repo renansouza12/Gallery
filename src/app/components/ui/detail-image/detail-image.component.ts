@@ -11,8 +11,16 @@ import { Component,Input} from '@angular/core';
 export class DetailImageComponent {
   @Input() detailImage!:string;
   @Input() alt!:string;
-  
+
+  @Input() userImage!:string;
+  @Input() userName!:string;
+
+  @Input() likes!:string;
+
+  @Input() date!:string;
+
   @Input() showImageDetail:string ='enable';
+
 
   closeImageDetail():void{
     this.showImageDetail = 'disable';

@@ -3,19 +3,17 @@
   <app-search-bar (searchBtnValue)="searchValuePhoto($event)" />
   <app-not-found *ngIf="notFound" (backBtn)="btnBack()" />
   <div class="gallery_images">
-    <app-card
-      *ngFor="let photo of photosList"
-      imgUrl="{{ photo.urls.regular }}"
-      (seeMoreImage)="seeMore(photo.id)"
-    />
+    <app-card *ngFor="let photo of photosList" imgUrl="{{ photo.urls.regular }}" (seeMoreImage)="seeMore(photo.id)" />
   </div>
 
-  <app-detail-image
-    *ngFor="let detail of photoSelected"
+  <app-detail-image *ngFor="let detail of photoSelected" 
     detailImage="{{ detail.urls?.full }}"
-    alt="{{ detail.alt_description }}"
-    showImageDetail="showImageDetail"
-  />
+    alt="{{ detail.alt_description }}" 
+    userImage="{{detail.user?.profile_image?.medium}}"
+    userName="{{detail.user?.name}}" 
+    likes="{{detail.likes}}" 
+    date="{{dateFormated}}"
+    />
 
   <button class="next" *ngIf="activeButton" (click)="loadMore()">
     See more

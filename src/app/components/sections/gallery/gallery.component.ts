@@ -22,6 +22,7 @@ export class GalleryComponent implements OnInit {
 
   page: number = 1;
   value: string = '';
+  dateFormated!:any;
 
   notFound: boolean = false;
   activeButton: boolean = true;
@@ -75,8 +76,15 @@ export class GalleryComponent implements OnInit {
   seeMore(id: String): void {
     this.photosList.forEach(photo => {
       if (photo.id === id) {
-        this.photoSelected.push(photo)
+        this.photoSelected.push(photo);
+        this.photoSelected.map(detail =>  this.formatDate(detail.created_at) );
+        console.log(this.photoSelected);
+        
       }
     })
+  }
+
+  formatDate(date:any){
+    console.log( "date here", date);  
   }
 }

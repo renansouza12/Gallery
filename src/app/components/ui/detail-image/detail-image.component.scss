@@ -1,67 +1,103 @@
-.detail_image{
+.detail_image {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 100;
-    height: 500px;
+    height: 600px;
     width: 80vw;
     background-color: var(--Bg-color);
     display: grid;
-    grid-template-columns: 100px repeat(2,1fr);
+    grid-template-columns: .5fr repeat(2, 1fr);
     grid-template-rows: 0.3fr 80% 10%;
 
-    &.disable{
+    &.disable {
         display: none;
     }
-    &.enable{
+
+    &.enable {
         display: grid;
     }
 
-    .detail_image_header{
+    .detail_image_header {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
         border-bottom: 1px solid var(--Yellow);
-        grid-area: 1/1/2/4; 
-        h1{
+        grid-area: 1/1/2/4;
+
+        h1 {
             font-size: 20px;
         }
-        button{
-            i{
+
+        button {
+            i {
                 font-size: 1.5rem;
             }
         }
     }
 
-    .image_container{
+    .image_container {
         height: 100%;
         width: 100%;
         grid-area: 2/2/2/4;
-        img{
+
+        img {
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
-    .detail_title{
+
+    .detail_title {
         grid-area: 2/1/2/2;
         display: grid;
         place-content: center;
         border-right: 1px solid var(--Yellow);
-        h1{
+
+        h1 {
             text-transform: uppercase;
             font-weight: 100;
             rotate: 90deg;
+            font-size: 4vw;
         }
     }
-    .detail_image_footer{
+
+    .detail_image_footer {
         border-top: 1px solid var(--Yellow);
         height: 100%;
         width: 100%;
         grid-area: 3/1/4/4;
-        
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 10px;
+
+        .user {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 1px solid var(--Yellow);
+            }
+        }
+
+        .likes{
+            span{
+                strong{
+                    color: var(--Yellow);
+                }
+            }
+        }
+
     }
 }
