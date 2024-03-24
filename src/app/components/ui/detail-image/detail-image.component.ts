@@ -6,7 +6,7 @@ import { Component,Input} from '@angular/core';
   standalone: true,
   imports: [NgOptimizedImage,CommonModule],
   templateUrl: './detail-image.component.html',
-  styleUrl: './detail-image.component.scss'
+  styleUrls: ['./detail-image.component.scss','./detail-image.responsive.component.scss']
 })
 export class DetailImageComponent {
   @Input() detailImage!:string;

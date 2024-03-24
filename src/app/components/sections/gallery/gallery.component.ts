@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../ui/card/card.component';
 import { ImagesService } from '../../../services/images.service';
-import { Photo} from '../../../models/photos.model';
+import { Photo } from '../../../models/photos.model';
 import { Details } from '../../../models/details.model';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from '../../ui/search-bar/search-bar.component';
@@ -22,7 +22,7 @@ export class GalleryComponent implements OnInit {
 
   page: number = 1;
   value: string = '';
-  dateFormated!:any;
+  dateFormated!: string | undefined;
 
   notFound: boolean = false;
   activeButton: boolean = true;
@@ -77,14 +77,8 @@ export class GalleryComponent implements OnInit {
     this.photosList.forEach(photo => {
       if (photo.id === id) {
         this.photoSelected.push(photo);
-        this.photoSelected.map(detail =>  this.formatDate(detail.created_at) );
-        console.log(this.photoSelected);
-        
+        this.photoSelected.map(detail => this.dateFormated = detail.created_at);
       }
     })
-  }
-
-  formatDate(date:any){
-    console.log( "date here", date);  
   }
 }

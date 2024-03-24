@@ -1,0 +1,33 @@
+@media (max-width:768px) {
+    .detail_image {
+
+        .image_container {
+            grid-area: 2/1/2/4;
+        }
+
+        .detail_title {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:425px) {
+    .detail_image {
+        .detail_image_footer {
+            .user {
+                span {
+                    font-size: 13px;
+                }
+            }
+
+            .date,
+            .likes {
+                span {
+                    font-size: 10px;
+                }
+            }
+
+        }
+
+    }
+}

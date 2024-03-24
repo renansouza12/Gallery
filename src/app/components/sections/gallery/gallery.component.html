@@ -12,7 +12,7 @@
     userImage="{{detail.user?.profile_image?.medium}}"
     userName="{{detail.user?.name}}" 
     likes="{{detail.likes}}" 
-    date="{{dateFormated}}"
+    date="{{dateFormated | date : 'dd/MM/yyyy' }}"
     />
 
   <button class="next" *ngIf="activeButton" (click)="loadMore()">

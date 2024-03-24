@@ -1,3 +1,9 @@
+@mixin align($gap:10px){
+    display: flex;
+    align-items: center;
+    gap: $gap;
+}
+
 .detail_image {
     position: fixed;
     top: 50%;
@@ -78,26 +84,22 @@
 
         .user {
             height: 100%;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            @include align();
 
             img {
-                height: 50px;
-                width: 50px;
+                height: 40px;
+                width: 40px;
                 border-radius: 50%;
                 object-fit: cover;
                 border: 1px solid var(--Yellow);
             }
         }
-
-        .likes{
-            span{
-                strong{
-                    color: var(--Yellow);
-                }
-            }
+        .date{
+           span{
+            @include align();
+           }
         }
 
     }
 }
+
