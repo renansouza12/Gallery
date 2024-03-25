@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { Photo } from '../models/photos.model';
 import { catchError } from 'rxjs/operators';
@@ -13,8 +13,9 @@ export class ImagesService {
 
   constructor(private httpClient: HttpClient) {}
 
+  const apiKey = environment.apiKey; 
+
   getPhotos(pages: number) {
-    const apiKey = environment.apiKey; 
     return this.httpClient.get<Photo[]>(
       `${this.apiUrl}/photos/?client_id=${apiKey}&page=${pages}&per_page=21`
     ).pipe(
@@ -26,7 +27,6 @@ export class ImagesService {
   }
   
   getSearchPhoto(pages: number, value: string) {
-    const apiKey = environment.apiKey; 
     return this.httpClient.get<Photo[]>(
       `${this.apiUrl}/search/photos/?client_id=${apiKey}&page=${pages}&per_page=31&query=${value}`
     ).pipe(
