@@ -1,27 +1,23 @@
+
 # Gallery
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+A website displaying images that were obtained using the Unsplash API, presenting both images and additional details about each image.
+## Features
 
-## Development server
+- Search bar functionality
+- Display detail of images
+- Load more button for additional content
+- Responsive design for compatibility across devices
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Screenshots
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![App Screenshot](https://i.ibb.co/ZYPCXFg/first.png)
 
-## Build
+![App Screenshot](https://i.ibb.co/rxTN7z7/second.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![App Screenshot](https://i.ibb.co/WnKKp30/third.png)
 
-## Running unit tests
+![App Screenshot](https://i.ibb.co/9tmxT5Z/fourth.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
