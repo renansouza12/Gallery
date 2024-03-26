@@ -1,8 +1,8 @@
 
-# Gallery
+# Gallery 🖼
 
 A website displaying images that were obtained using the Unsplash API, presenting both images and additional details about each image.
-## Features
+## Features 🧩
 
 - Search bar functionality
 - Display detail of images
